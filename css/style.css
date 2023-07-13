@@ -1,0 +1,639 @@
+/*=============== BASE ===============*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  background-color: #fdfdfd;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  line-height: 1; }
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 5vw 1fr repeat(3, 1fr) repeat(2, 1fr); }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+  .header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 100%;
+    font-size: 4rem;
+    line-height: 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.258); }
+    .header__logo:hover {
+      cursor: pointer; }
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .header__menu-logo {
+      font-size: 2.5rem;
+      padding: 1.5rem 100%;
+      line-height: 0; }
+      .header__menu-logo:first-child {
+        background-color: #f2ebe1; }
+      .header__menu-logo:hover {
+        cursor: pointer;
+        background-color: #f2ebe1; }
+  .header__footer-logo {
+    height: 3.5rem;
+    width: 3.5rem;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin-bottom: 1.5rem; }
+    .header__footer-logo:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.769); }
+
+.profile {
+  grid-column: 6 / -1;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 4rem; }
+  .profile__logo {
+    font-size: 2.5rem;
+    color: #f08c55;
+    align-self: flex-end;
+    margin-bottom: 1.8rem; }
+    .profile__logo:hover {
+      cursor: pointer; }
+  .profile__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4.5rem; }
+    .profile__info_button {
+      height: 3rem;
+      width: 10rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      color: white;
+      background-color: #f0884e; }
+      .profile__info_button:hover {
+        cursor: pointer;
+        background-color: #f0874ea2; }
+    .profile__info_details {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2rem; }
+      .profile__info_details ion-icon:first-child {
+        font-size: 2.5rem; }
+        .profile__info_details ion-icon:first-child:hover {
+          cursor: pointer; }
+      .profile__info_details .show-icon {
+        font-size: 2rem;
+        color: #f0884e; }
+        .profile__info_details .show-icon:hover {
+          cursor: pointer; }
+      .profile__info_details .notification-dot {
+        position: absolute;
+        top: 0.5rem;
+        left: 1.4rem;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #f0884e; }
+      .profile__info_details-data {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem; }
+      .profile__info_details-photo img {
+        height: 3rem;
+        width: 3rem;
+        object-fit: cover;
+        border-radius: 50%; }
+        .profile__info_details-photo img:hover {
+          cursor: pointer; }
+      .profile__info_details-name p:first-child {
+        font-size: 1rem;
+        color: gray;
+        font-weight: 500;
+        line-height: 1.5; }
+      .profile__info_details-name p:nth-child(2) {
+        font-size: 1.2rem;
+        letter-spacing: -0.01rem;
+        font-weight: 700; }
+  .profile__team {
+    margin-bottom: 3rem; }
+    .profile__team_heading {
+      font-size: 1.8rem;
+      letter-spacing: -0.01rem;
+      font-weight: 700;
+      margin-bottom: 1rem; }
+    .profile__team_photos {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly; }
+      .profile__team_photos img {
+        height: 4rem;
+        width: 4rem;
+        object-fit: cover;
+        border-radius: 50%; }
+        .profile__team_photos img:hover {
+          cursor: pointer; }
+      .profile__team_photos-jr {
+        height: 4rem;
+        width: 4rem;
+        font-size: 1.5rem;
+        color: #ef7f44;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #fcf2e0; }
+        .profile__team_photos-jr:hover {
+          cursor: pointer; }
+      .profile__team_photos-plus {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 2rem;
+        color: #ef7f44;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px dashed #ef7f44;
+        background-color: #fcf2e0; }
+        .profile__team_photos-plus:hover {
+          cursor: pointer; }
+  .profile__realdata {
+    margin-bottom: 3rem;
+    height: 8rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
+    .profile__realdata_time p:first-child {
+      color: rgba(0, 0, 0, 0.404);
+      font-size: 1.1rem;
+      font-weight: 520;
+      line-height: 1.8; }
+    .profile__realdata_time p:nth-child(2) {
+      font-size: 1.5rem;
+      font-weight: 700; }
+    .profile__realdata_progress p:first-child {
+      color: rgba(0, 0, 0, 0.404);
+      font-size: 1.1rem;
+      font-weight: 520;
+      line-height: 1.8; }
+    .profile__realdata_progress p:nth-child(2) {
+      font-size: 1.5rem;
+      font-weight: 700; }
+    .profile__realdata_tasks p:first-child {
+      color: rgba(0, 0, 0, 0.404);
+      font-size: 1.1rem;
+      font-weight: 520;
+      line-height: 1.8; }
+    .profile__realdata_tasks p:nth-child(2) {
+      font-size: 1.5rem;
+      font-weight: 700; }
+  .profile__dailywork_heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem; }
+    .profile__dailywork_heading p:first-child {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.01rem; }
+    .profile__dailywork_heading p:nth-child(2) {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #ef7f44;
+      margin-right: 3rem; }
+      .profile__dailywork_heading p:nth-child(2):hover {
+        cursor: pointer; }
+  .profile__dailywork_tasks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; }
+    .profile__dailywork_tasks_card {
+      height: 11rem;
+      border-radius: 10px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 8px; }
+    .profile__dailywork_tasks .task-card1 {
+      position: relative;
+      background-color: #f6f1eb; }
+      .profile__dailywork_tasks .task-card1 p {
+        font-size: 1.5rem;
+        font-weight: 510;
+        padding: 2rem 2rem 0 2rem; }
+      .profile__dailywork_tasks .task-card1 .add-icon {
+        position: absolute;
+        font-size: 2rem;
+        right: 1.5rem;
+        bottom: 1rem; }
+        .profile__dailywork_tasks .task-card1 .add-icon:hover {
+          cursor: pointer; }
+    .profile__dailywork_tasks .task-card2_status {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      margin: 1rem 2rem 0 0; }
+      .profile__dailywork_tasks .task-card2_status-icon {
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: orangered; }
+      .profile__dailywork_tasks .task-card2_status-text {
+        font-size: 1.1rem;
+        font-weight: 700; }
+      .profile__dailywork_tasks .task-card2_status-checkbox {
+        cursor: pointer;
+        height: 0.8rem;
+        width: 0.8rem;
+        appearance: none;
+        outline: 1px solid #f08c55; }
+        .profile__dailywork_tasks .task-card2_status-checkbox:checked {
+          color: white;
+          background-color: black; }
+    .profile__dailywork_tasks .task-card2_info {
+      font-size: 1.5rem;
+      font-weight: 510;
+      padding: 1rem 2rem 0 2rem; }
+    .profile__dailywork_tasks .task-card3_status {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      margin: 1rem 2rem 0 0; }
+      .profile__dailywork_tasks .task-card3_status-icon {
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #0aace1; }
+      .profile__dailywork_tasks .task-card3_status-text {
+        font-size: 1.1rem;
+        font-weight: 700; }
+      .profile__dailywork_tasks .task-card3_status-checkbox {
+        cursor: pointer;
+        height: 0.8rem;
+        width: 0.8rem;
+        appearance: none;
+        outline: 1px solid #f08c55; }
+        .profile__dailywork_tasks .task-card3_status-checkbox:checked {
+          color: white;
+          background-color: black; }
+    .profile__dailywork_tasks .task-card3_info {
+      font-size: 1.5rem;
+      font-weight: 510;
+      padding: 1rem 2rem 0 2rem; }
+    .profile__dailywork_tasks .task-card4 {
+      background-color: #f08c55; }
+      .profile__dailywork_tasks .task-card4_status {
+        display: flex;
+        align-items: center;
+        color: white;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        margin: 1rem 2rem 0 0; }
+        .profile__dailywork_tasks .task-card4_status-icon {
+          height: 0.5rem;
+          width: 0.5rem;
+          border-radius: 50%;
+          background-color: white; }
+        .profile__dailywork_tasks .task-card4_status-text {
+          font-size: 1.1rem;
+          font-weight: 700; }
+        .profile__dailywork_tasks .task-card4_status-checkbox {
+          cursor: pointer;
+          height: 0.8rem;
+          width: 0.8rem;
+          appearance: none;
+          outline: 1px solid white; }
+          .profile__dailywork_tasks .task-card4_status-checkbox:checked {
+            color: white;
+            background-color: black; }
+      .profile__dailywork_tasks .task-card4_info {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 510;
+        padding: 1rem 2rem 0 2rem; }
+
+.project {
+  background-color: #fdfdfd;
+  grid-column: 3 / 6;
+  margin: 1.5rem 4rem; }
+  .project__heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.01rem;
+    margin: 0.5rem 0 2rem 0; }
+  .project__search {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 100px;
+    border: 1px solid rgba(128, 128, 128, 0.543); }
+    .project__search__input {
+      border: none;
+      height: 2rem;
+      font-size: 1rem;
+      width: 80%; }
+      .project__search__input:focus {
+        outline: none;
+        width: 88%;
+        font-size: 0.9rem;
+        background-color: rgba(255, 255, 255, 0.502); }
+      .project__search__input::-webkit-input-placeholder {
+        font-weight: 300; }
+    .project__search__icon {
+      font-size: 1.2rem;
+      padding: 0 0.8rem 0 1rem; }
+      .project__search__icon:hover {
+        cursor: pointer; }
+  .project__recent {
+    margin: 3.5rem 0 2.5rem 0; }
+    .project__recent_heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem; }
+      .project__recent_heading p:first-child {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.01rem; }
+      .project__recent_heading p:nth-child(2) {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #f08c55; }
+        .project__recent_heading p:nth-child(2):hover {
+          cursor: pointer; }
+    .project__recent_info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .project__recent_card {
+      height: 28rem;
+      width: 48%;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .project__recent_card_head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2.5rem; }
+      .project__recent_card_gallery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; }
+      .project__recent_card .plus2 {
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1.3rem;
+        border-radius: 50%;
+        background-color: #fce5bc;
+        z-index: 10;
+        border: 2px solid black; }
+      .project__recent_card .plus3 {
+        color: white;
+        border: 2px solid #fcbda3;
+        z-index: 10;
+        font-weight: 600;
+        background-color: black; }
+      .project__recent_card_img {
+        height: 3rem;
+        width: 3rem;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #fcbda3; }
+        .project__recent_card_img:not(:first-child) {
+          margin-left: -1.3rem;
+          z-index: 5; }
+        .project__recent_card_img:last-child {
+          z-index: 1; }
+      .project__recent_card_logo {
+        font-size: 1.8rem;
+        line-height: 0; }
+        .project__recent_card_logo:hover {
+          cursor: pointer; }
+      .project__recent_card_data_title {
+        font-size: 2rem;
+        font-weight: 700; }
+      .project__recent_card_data_deadline {
+        font-weight: 400;
+        line-height: 4; }
+      .project__recent_card_progress p {
+        font-weight: 500;
+        line-height: 2.5; }
+      .project__recent_card_progress-bar {
+        height: 0.5rem;
+        width: 100%;
+        background-color: #dea68f;
+        border-radius: 100px; }
+        .project__recent_card_progress-bar div {
+          height: 0.5rem;
+          width: 40%;
+          border-radius: 100px;
+          background-color: black; }
+      .project__recent_card:nth-child(1) {
+        background-color: #fcbda3; }
+      .project__recent_card:nth-child(2) {
+        background-color: #fce5bc; }
+        .project__recent_card:nth-child(2) .project__recent_card_progress-bar {
+          background-color: #decaa5; }
+          .project__recent_card:nth-child(2) .project__recent_card_progress-bar div {
+            width: 70%; }
+        .project__recent_card:nth-child(2) .project__recent_card_img {
+          border: 2px solid #fce5bc; }
+  .project__reminder_heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem; }
+    .project__reminder_heading p {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.01rem; }
+  .project__reminder_card {
+    height: 12rem;
+    border-radius: 20px;
+    border: 1px solid #aba49969;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .project__reminder_card_data {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between; }
+    .project__reminder_card_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 13rem; }
+    .project__reminder_card_time p {
+      color: rgba(0, 0, 0, 0.664);
+      font-size: 1.2rem;
+      font-weight: 520;
+      line-height: 1.2; }
+    .project__reminder_card_title p {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2; }
+    .project__reminder_card_button {
+      height: 3rem;
+      width: 12rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: flex;
+      padding: 1rem 1rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      border: 1px dashed #ffb393; }
+      .project__reminder_card_button:hover {
+        cursor: pointer;
+        background-color: #ffb3933f; }
+    .project__reminder_card_footer {
+      display: flex;
+      gap: 0.5rem;
+      align-self: center; }
+      .project__reminder_card_footer-icon {
+        height: 0.6rem;
+        width: 0.6rem;
+        border-radius: 50%;
+        background-color: #f08b5547; }
+        .project__reminder_card_footer-icon:first-child {
+          background-color: #f08c55; }
+        .project__reminder_card_footer-icon:hover {
+          cursor: pointer; }
+
+.sidebar {
+  background-color: #f2ebe1; }
+  .sidebar__heading {
+    padding: 1.5rem 0 1.5rem 2rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.258); }
+    .sidebar__heading p:first-child {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.4; }
+      .sidebar__heading p:first-child:hover {
+        cursor: pointer; }
+    .sidebar__heading p:nth-child(2) {
+      color: rgba(0, 0, 0, 0.664);
+      font-size: 1.2rem;
+      font-weight: 520; }
+  .sidebar__menu {
+    font-size: 1.5rem;
+    padding: 3rem 2rem 0rem 2rem; }
+    .sidebar__menu_team {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem; }
+      .sidebar__menu_team p {
+        font-weight: 700;
+        letter-spacing: -0.01rem; }
+      .sidebar__menu_team ion-icon {
+        padding-bottom: 0.3rem; }
+        .sidebar__menu_team ion-icon:hover {
+          cursor: pointer; }
+    .sidebar__menu_project {
+      margin-bottom: 2rem; }
+      .sidebar__menu_project-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .sidebar__menu_project-heading p {
+          font-weight: 700;
+          letter-spacing: -0.01rem; }
+        .sidebar__menu_project-heading ion-icon {
+          padding-bottom: 0.3rem; }
+          .sidebar__menu_project-heading ion-icon:hover {
+            cursor: pointer; }
+      .sidebar__menu_project-details {
+        margin: 1.5rem 0 0 2rem; }
+        .sidebar__menu_project-details p {
+          color: rgba(0, 0, 0, 0.664);
+          font-size: 1.2rem;
+          font-weight: 520;
+          margin-bottom: 0.8rem; }
+        .sidebar__menu_project-details p:last-child {
+          color: black; }
+    .sidebar__menu_task {
+      margin-bottom: 2rem; }
+      .sidebar__menu_task-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .sidebar__menu_task-heading p {
+          font-weight: 700;
+          letter-spacing: -0.01rem; }
+        .sidebar__menu_task-heading ion-icon {
+          padding-bottom: 0.3rem; }
+          .sidebar__menu_task-heading ion-icon:hover {
+            cursor: pointer; }
+      .sidebar__menu_task-details {
+        margin: 1.5rem 0 0 2rem; }
+        .sidebar__menu_task-details p {
+          color: rgba(0, 0, 0, 0.664);
+          font-size: 1.2rem;
+          font-weight: 520;
+          margin-bottom: 0.8rem; }
+        .sidebar__menu_task-details p:last-child {
+          color: black; }
+    .sidebar__menu_reminder {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem; }
+      .sidebar__menu_reminder p {
+        font-weight: 700;
+        letter-spacing: -0.01rem; }
+      .sidebar__menu_reminder ion-icon {
+        padding-bottom: 0.3rem; }
+        .sidebar__menu_reminder ion-icon:hover {
+          cursor: pointer; }
+    .sidebar__menu_messenger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .sidebar__menu_messenger p {
+        font-weight: 700;
+        letter-spacing: -0.01rem; }
+      .sidebar__menu_messenger ion-icon {
+        padding-bottom: 0.3rem; }
+        .sidebar__menu_messenger ion-icon:hover {
+          cursor: pointer; }

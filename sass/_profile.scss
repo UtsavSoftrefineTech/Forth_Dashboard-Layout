@@ -1,0 +1,382 @@
+.profile {
+  grid-column: 6 / -1;
+
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 4rem;
+
+  &__logo {
+    font-size: 2.5rem;
+    color: #f08c55;
+    align-self: flex-end;
+    margin-bottom: 1.8rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4.5rem;
+
+    &_button {
+      height: 3rem;
+      width: 10rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      color: white;
+      background-color: #f0884e;
+
+      // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #f0874ea2;
+      }
+    }
+
+    &_details {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      & ion-icon:first-child {
+        font-size: 2.5rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .show-icon {
+        font-size: 2rem;
+        color: #f0884e;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .notification-dot {
+        position: absolute;
+        top: 0.5rem;
+        left: 1.4rem;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: #f0884e;
+      }
+
+      &-data {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      &-photo img {
+        height: 3rem;
+        width: 3rem;
+        object-fit: cover;
+        border-radius: 50%;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &-name {
+        & p:first-child {
+          font-size: 1rem;
+          color: gray;
+          font-weight: 500;
+          line-height: 1.5;
+        }
+        & p:nth-child(2) {
+          font-size: 1.2rem;
+          letter-spacing: -0.01rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__team {
+    margin-bottom: 3rem;
+    &_heading {
+      font-size: 1.8rem;
+      letter-spacing: -0.01rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    &_photos {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      & img {
+        height: 4rem;
+        width: 4rem;
+        object-fit: cover;
+        border-radius: 50%;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &-jr {
+        height: 4rem;
+        width: 4rem;
+        font-size: 1.5rem;
+        color: #ef7f44;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #fcf2e0;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &-plus {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 2rem;
+        color: #ef7f44;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px dashed #ef7f44;
+        background-color: #fcf2e0;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__realdata {
+    margin-bottom: 3rem;
+    height: 8rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &_time p:first-child {
+      color: rgba(0, 0, 0, 0.404);
+      font-size: 1.1rem;
+      font-weight: 520;
+      line-height: 1.8;
+    }
+
+    &_time p:nth-child(2) {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    &_progress p:first-child {
+      color: rgba(0, 0, 0, 0.404);
+      font-size: 1.1rem;
+      font-weight: 520;
+      line-height: 1.8;
+    }
+
+    &_progress p:nth-child(2) {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    &_tasks p:first-child {
+      color: rgba(0, 0, 0, 0.404);
+      font-size: 1.1rem;
+      font-weight: 520;
+      line-height: 1.8;
+    }
+
+    &_tasks p:nth-child(2) {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__dailywork {
+    &_heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      & p:first-child {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.01rem;
+      }
+      & p:nth-child(2) {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #ef7f44;
+        margin-right: 3rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_tasks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+
+      &_card {
+        height: 11rem;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 8px;
+      }
+
+      .task-card1 {
+        position: relative;
+        background-color: #f6f1eb;
+
+        & p {
+          font-size: 1.5rem;
+          font-weight: 510;
+          padding: 2rem 2rem 0 2rem;
+        }
+
+        .add-icon {
+          position: absolute;
+          font-size: 2rem;
+          right: 1.5rem;
+          bottom: 1rem;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .task-card2 {
+        &_status {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 0.5rem;
+          margin: 1rem 2rem 0 0;
+
+          &-icon {
+            height: 0.5rem;
+            width: 0.5rem;
+            border-radius: 50%;
+            background-color: orangered;
+          }
+
+          &-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+          }
+
+          &-checkbox {
+            cursor: pointer;
+            height: 0.8rem;
+            width: 0.8rem;
+            appearance: none;
+            outline: 1px solid #f08c55;
+            &:checked {
+              color: white;
+              background-color: black;
+            }
+          }
+        }
+        &_info {
+          font-size: 1.5rem;
+          font-weight: 510;
+          padding: 1rem 2rem 0 2rem;
+        }
+      }
+
+      .task-card3 {
+        &_status {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 0.5rem;
+          margin: 1rem 2rem 0 0;
+
+          &-icon {
+            height: 0.5rem;
+            width: 0.5rem;
+            border-radius: 50%;
+            background-color: rgb(10, 172, 225);
+          }
+          &-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+          }
+
+          &-checkbox {
+            cursor: pointer;
+            height: 0.8rem;
+            width: 0.8rem;
+            appearance: none;
+            outline: 1px solid #f08c55;
+            &:checked {
+              color: white;
+              background-color: black;
+            }
+          }
+        }
+        &_info {
+          font-size: 1.5rem;
+          font-weight: 510;
+          padding: 1rem 2rem 0 2rem;
+        }
+      }
+
+      .task-card4 {
+        background-color: #f08c55;
+        &_status {
+          display: flex;
+          align-items: center;
+          color: white;
+          justify-content: flex-end;
+          gap: 0.5rem;
+          margin: 1rem 2rem 0 0;
+
+          &-icon {
+            height: 0.5rem;
+            width: 0.5rem;
+            border-radius: 50%;
+            background-color: white;
+          }
+          &-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+          }
+          &-checkbox {
+            cursor: pointer;
+            height: 0.8rem;
+            width: 0.8rem;
+            appearance: none;
+            outline: 1px solid white;
+            &:checked {
+              color: white;
+              background-color: black;
+            }
+          }
+        }
+        &_info {
+          color: white;
+          font-size: 1.5rem;
+          font-weight: 510;
+          padding: 1rem 2rem 0 2rem;
+        }
+      }
+    }
+  }
+}
