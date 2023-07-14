@@ -1,7 +1,8 @@
 .project {
   background-color: #fdfdfd;
   grid-column: 3 / 6;
-  margin: 1.5rem 4rem;
+  padding: 1.5rem 4rem;
+  box-shadow: -0.6rem 0 3rem -2px rgba(0, 0, 0, 0.1);
 
   &__heading {
     font-size: 1.8rem;
@@ -38,7 +39,7 @@
     }
 
     &__icon {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       padding: 0 0.8rem 0 1rem;
       &:hover {
         cursor: pointer;
@@ -72,10 +73,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+      }
+      @media only screen and (max-width: 500px) {
+        flex-direction: row;
+        padding: 2rem;
+      }
+      @media only screen and (max-width: 400px) {
+        flex-direction: column;
+        padding: 0;
+      }
     }
 
     &_card {
-      height: 28rem;
+      height: 30rem;
       width: 48%;
       border-radius: 20px;
       padding: 3rem 2rem;
@@ -193,6 +206,25 @@
         }
         background-color: #fce5bc;
       }
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+      }
+
+      @media only screen and (max-width: 850px) {
+        height: 25rem;
+        width: 80%;
+        margin: 1rem 0;
+      }
+
+      @media only screen and (max-width: 500px) {
+        height: 28rem;
+        width: 48%;
+      }
+      @media only screen and (max-width: 400px) {
+        height: 28rem;
+        width: 65%;
+      }
     }
   }
 
@@ -231,7 +263,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 13rem;
+        // padding-right: 13rem;
       }
 
       &_time {
@@ -245,25 +277,19 @@
 
       &_title {
         & p {
-          font-size: 2rem;
+          width: 20vw;
+          font-size: 1.8rem;
           font-weight: 700;
           line-height: 1.2;
         }
       }
 
       &_button {
-        height: 3rem;
-        width: 12rem;
         font-size: 1.2rem;
         font-weight: 600;
-        display: flex;
-        padding: 1rem 1rem;
-        align-items: center;
-        justify-content: center;
+        padding: 1rem 2rem;
         border-radius: 100px;
         border: 1px dashed #ffb393;
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
         &:hover {
           cursor: pointer;
           background-color: #ffb3933f;
@@ -290,5 +316,169 @@
         }
       }
     }
+    @media only screen and (max-width: 850px) {
+      &_heading {
+        & p {
+          font-size: 1.8rem;
+          letter-spacing: -0.01rem;
+        }
+      }
+
+      &_card {
+        height: 10rem;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+
+        &_time {
+          & p {
+            font-size: 1.1rem;
+          }
+        }
+
+        &_title {
+          & p {
+            width: 18vw;
+            font-size: 1.5rem;
+            line-height: 1.2;
+          }
+        }
+
+        &_button {
+          padding: 0.8rem 0.8rem;
+        }
+      }
+    }
+    @media only screen and (max-width: 740px) {
+      &_card {
+        height: 9rem;
+        padding: 1rem 1rem 1rem 1rem;
+
+        &_title {
+          & p {
+            font-size: 1.4rem;
+          }
+        }
+
+        &_button {
+          padding: 0.5rem 0.5rem;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 700px) {
+      &_card {
+        height: 9rem;
+        padding: 1.5rem;
+
+        &_title {
+          & p {
+            width: 26vw;
+            font-size: 1.4rem;
+          }
+        }
+
+        &_button {
+          padding: 0.5rem 0.8rem;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 550px) {
+      &_card {
+        height: 10rem;
+        padding: 1.5rem 1rem 1rem 2rem;
+
+        &_time {
+          & p {
+            font-size: 1.2rem;
+          }
+        }
+
+        &_title {
+          & p {
+            width: 25vw;
+            font-size: 1.5rem;
+          }
+        }
+
+        &_button {
+          padding: 0.5rem 0.5rem;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      &_card {
+        height: 11rem;
+        padding: 2rem 2rem 1.5rem 2rem;
+
+        &_time {
+          & p {
+            font-size: 1.2rem;
+          }
+        }
+
+        &_title {
+          & p {
+            width: 50vw;
+            font-size: 1.8rem;
+          }
+        }
+
+        &_button {
+          padding: 1rem 1.5rem;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    padding: 1.5rem 3rem;
+  }
+  @media only screen and (max-width: 770px) {
+    padding: 1.5rem 2rem;
+  }
+  @media only screen and (max-width: 700px) {
+    grid-row: 2 / -1;
+    grid-column: 1 / 2;
+    box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 5.2px;
+  }
+  @media only screen and (max-width: 500px) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .recent_scroll {
+    height: 28rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .recent_scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .recent_scroll {
+    height: 32rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .recent_scroll {
+    height: 28rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .recent_scroll::-webkit-scrollbar {
+    display: none;
   }
 }

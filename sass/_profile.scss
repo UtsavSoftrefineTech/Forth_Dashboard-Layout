@@ -5,13 +5,31 @@
   flex-direction: column;
   margin: 1.5rem 4rem;
 
-  &__logo {
-    font-size: 2.5rem;
-    color: #f08c55;
-    align-self: flex-end;
-    margin-bottom: 1.8rem;
-    &:hover {
-      cursor: pointer;
+  &__header {
+    display: flex;
+    margin: 1.5rem 0 1.8rem 0;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      font-size: 2.5rem;
+      color: #f08c55;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__button {
+      visibility: hidden;
+      padding: 0.8rem 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 100px;
+      color: white;
+      background-color: #f0884e;
+      @media only screen and (max-width: 700px) {
+        visibility: visible;
+      }
     }
   }
 
@@ -37,7 +55,15 @@
 
       &:hover {
         cursor: pointer;
-        background-color: #f0874ea2;
+        background-color: rgba(240, 135, 78, 0.929);
+      }
+      @media only screen and (max-width: 850px) {
+        height: 2.8rem;
+        width: 9rem;
+      }
+      @media only screen and (max-width: 740px) {
+        height: 2.5rem;
+        width: 8rem;
       }
     }
 
@@ -101,6 +127,28 @@
           font-weight: 700;
         }
       }
+      @media only screen and (max-width: 1000px) {
+        gap: 1.5rem;
+      }
+      @media only screen and (max-width: 950px) {
+        gap: 1rem;
+      }
+      @media only screen and (max-width: 850px) {
+        gap: 1.5rem;
+      }
+      @media only screen and (max-width: 740px) {
+        gap: 1rem;
+        & ion-icon:first-child {
+          font-size: 2.2rem;
+        }
+        .show-icon {
+          font-size: 1.8rem;
+          color: #f0884e;
+        }
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      display: none;
     }
   }
 
@@ -111,6 +159,13 @@
       letter-spacing: -0.01rem;
       font-weight: 700;
       margin-bottom: 1rem;
+
+      @media only screen and (max-width: 700px) {
+        margin-top: 0.5rem;
+      }
+      @media only screen and (max-width: 500px) {
+        margin: 2rem 0;
+      }
     }
     &_photos {
       display: flex;
@@ -123,6 +178,26 @@
         border-radius: 50%;
         &:hover {
           cursor: pointer;
+        }
+        @media only screen and (max-width: 1000px) {
+          height: 3.5rem;
+          width: 3.5rem;
+        }
+        @media only screen and (max-width: 900px) {
+          height: 3rem;
+          width: 3rem;
+        }
+        @media only screen and (max-width: 740px) {
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+        @media only screen and (max-width: 500px) {
+          height: 4rem;
+          width: 4rem;
+        }
+        @media only screen and (max-width: 400px) {
+          height: 3rem;
+          width: 3rem;
         }
       }
 
@@ -140,6 +215,23 @@
         &:hover {
           cursor: pointer;
         }
+
+        @media only screen and (max-width: 1000px) {
+          height: 3.5rem;
+          width: 3.5rem;
+        }
+        @media only screen and (max-width: 900px) {
+          height: 3rem;
+          width: 3rem;
+        }
+        @media only screen and (max-width: 500px) {
+          height: 4rem;
+          width: 4rem;
+        }
+        @media only screen and (max-width: 400px) {
+          height: 3rem;
+          width: 3rem;
+        }
       }
       &-plus {
         height: 2.5rem;
@@ -155,6 +247,23 @@
         &:hover {
           cursor: pointer;
         }
+
+        @media only screen and (max-width: 1000px) {
+          height: 2rem;
+          width: 2rem;
+        }
+        @media only screen and (max-width: 900px) {
+          height: 1.8rem;
+          width: 1.8rem;
+        }
+        @media only screen and (max-width: 500px) {
+          height: 3rem;
+          width: 3rem;
+        }
+        @media only screen and (max-width: 400px) {
+          height: 2rem;
+          width: 2rem;
+        }
       }
     }
   }
@@ -162,7 +271,7 @@
   &__realdata {
     margin-bottom: 3rem;
     height: 8rem;
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -173,7 +282,7 @@
       color: rgba(0, 0, 0, 0.404);
       font-size: 1.1rem;
       font-weight: 520;
-      line-height: 1.8;
+      margin-bottom: 0.5rem;
     }
 
     &_time p:nth-child(2) {
@@ -184,8 +293,8 @@
     &_progress p:first-child {
       color: rgba(0, 0, 0, 0.404);
       font-size: 1.1rem;
+      margin-bottom: 0.5rem;
       font-weight: 520;
-      line-height: 1.8;
     }
 
     &_progress p:nth-child(2) {
@@ -195,14 +304,69 @@
 
     &_tasks p:first-child {
       color: rgba(0, 0, 0, 0.404);
+      margin-bottom: 0.5rem;
       font-size: 1.1rem;
       font-weight: 520;
-      line-height: 1.8;
     }
 
     &_tasks p:nth-child(2) {
       font-size: 1.5rem;
       font-weight: 700;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      padding: 0 1.5rem;
+    }
+    @media only screen and (max-width: 950px) {
+      height: 7.5rem;
+      padding: 0 0.8rem;
+    }
+    @media only screen and (max-width: 850px) {
+      padding: 0 2rem;
+    }
+    @media only screen and (max-width: 770px) {
+      padding: 0 1.5rem;
+    }
+    @media only screen and (max-width: 740px) {
+      padding: 0 1rem;
+      &_time p:first-child {
+        font-size: 1rem;
+      }
+
+      &_time p:nth-child(2) {
+        font-size: 1.3rem;
+      }
+
+      &_progress p:first-child {
+        font-size: 1rem;
+      }
+
+      &_progress p:nth-child(2) {
+        font-size: 1.3rem;
+      }
+
+      &_tasks p:first-child {
+        font-size: 1rem;
+      }
+
+      &_tasks p:nth-child(2) {
+        font-size: 1.3rem;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      padding: 0 2.5rem;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 0 2rem;
+    }
+    @media only screen and (max-width: 550px) {
+      padding: 0 1.5rem;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: 0 4rem;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 0 3rem;
     }
   }
 
@@ -227,17 +391,29 @@
           cursor: pointer;
         }
       }
+      @media only screen and (max-width: 700px) {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+      }
     }
 
     &_tasks {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
+      // padding: 1rem;
 
       &_card {
-        height: 11rem;
+        height: 12rem;
         border-radius: 10px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 8px;
+        box-shadow: rgba(149, 157, 165, 0.315) 0px 4px 8px;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+        @media only screen and (max-width: 700px) {
+          height: 13rem;
+        }
       }
 
       .task-card1 {
@@ -247,7 +423,7 @@
         & p {
           font-size: 1.5rem;
           font-weight: 510;
-          padding: 2rem 2rem 0 2rem;
+          padding: 3.5rem 2rem 0 2.5rem;
         }
 
         .add-icon {
@@ -257,6 +433,17 @@
           bottom: 1rem;
           &:hover {
             cursor: pointer;
+          }
+        }
+        @media only screen and (max-width: 950px) {
+          & p {
+            padding: 2rem 2rem 0 1.5rem;
+          }
+        }
+        @media only screen and (max-width: 850px) {
+          & p {
+            font-size: 1.3rem;
+            padding: 2.5rem 2rem 0 2rem;
           }
         }
       }
@@ -298,6 +485,11 @@
           font-weight: 510;
           padding: 1rem 2rem 0 2rem;
         }
+        @media only screen and (max-width: 770px) {
+          &_info {
+            font-size: 1.3rem;
+          }
+        }
       }
 
       .task-card3 {
@@ -335,6 +527,11 @@
           font-size: 1.5rem;
           font-weight: 510;
           padding: 1rem 2rem 0 2rem;
+        }
+        @media only screen and (max-width: 770px) {
+          &_info {
+            font-size: 1.3rem;
+          }
         }
       }
 
@@ -376,7 +573,41 @@
           font-weight: 510;
           padding: 1rem 2rem 0 2rem;
         }
+
+        @media only screen and (max-width: 770px) {
+          &_info {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        gap: 3rem;
+        margin-bottom: 2rem;
       }
     }
   }
+
+  @media only screen and (max-width: 700px) {
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+  }
+  @media only screen and (max-width: 500px) {
+    grid-row: 3 / -1;
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+  }
 }
+
+// .dailytask-scroll {
+//   height: 28rem;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   text-align: justify;
+//   scrollbar-width: none;
+//   -ms-overflow-style: none;
+// }
+
+// .dailytask-scroll::-webkit-scrollbar {
+//   display: none;
+// }

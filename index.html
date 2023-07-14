@@ -51,6 +51,57 @@
           </div>
         </div>
       </div>
+      <div class="mobile">
+        <div class="mobile__header">
+          <div class="mobile__header__brand">
+            <div class="mobile__header__logo">
+              <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="mobile__header__heading">
+              <p>Ziferblat</p>
+              <p>Teamwork &amp; time management</p>
+            </div>
+          </div>
+
+          <div class="mobile__header__info_details">
+            <ion-icon name="notifications-outline"></ion-icon>
+            <div class="mobile__header__info_details-data">
+              <div class="mobile__header__info_details-photo">
+                <img src="./img/1.jpg" alt="Maria" />
+              </div>
+              <div class="mobile__header__info_details-name">
+                <p>User</p>
+                <p>Maria</p>
+              </div>
+            </div>
+            <ion-icon
+              class="show-icon"
+              name="arrow-down-circle-outline"
+            ></ion-icon>
+            <div class="notification-dot"></div>
+          </div>
+        </div>
+        <div class="mobile__menu">
+          <div class="mobile__menu-logo">
+            <ion-icon name="home-outline"></ion-icon>
+          </div>
+          <div class="mobile__menu-logo">
+            <ion-icon name="people-outline"></ion-icon>
+          </div>
+          <div class="mobile__menu-logo">
+            <ion-icon name="today-outline"></ion-icon>
+          </div>
+          <div class="mobile__menu-logo">
+            <ion-icon name="create-outline"></ion-icon>
+          </div>
+          <div class="mobile__menu-logo">
+            <ion-icon name="time-outline"></ion-icon>
+          </div>
+          <div class="mobile__menu-logo">
+            <ion-icon name="chatbubble-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
 
       <!-- Sidebar Section  -->
 
@@ -124,7 +175,7 @@
             <p>Recent projects</p>
             <p>View all</p>
           </div>
-          <div class="project__recent_info">
+          <div class="project__recent_info recent_scroll">
             <div class="project__recent_card">
               <div>
                 <div class="project__recent_card_head">
@@ -232,9 +283,13 @@
       <!-- Profile Section  -->
 
       <div class="profile">
-        <div class="profile__logo">
-          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        <div class="profile__header">
+          <div class="profile__header__button">Add project</div>
+          <div class="profile__header__logo">
+            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+          </div>
         </div>
+
         <div class="profile__info">
           <div class="profile__info_button">Add project</div>
           <div class="profile__info_details">
@@ -292,7 +347,7 @@
             <p>Daily tasks (3)</p>
             <p>Edit</p>
           </div>
-          <div class="profile__dailywork_tasks">
+          <div class="profile__dailywork_tasks dailytask-scroll">
             <div class="profile__dailywork_tasks_card task-card1">
               <p>Add new</p>
               <ion-icon class="add-icon" name="add-outline"></ion-icon>
@@ -309,7 +364,7 @@
                 />
               </div>
               <div class="task-card2_info">
-                <p>Change color palette to more bright</p>
+                <p>Change color Palette to more bright</p>
               </div>
             </div>
             <div class="profile__dailywork_tasks_card task-card3">

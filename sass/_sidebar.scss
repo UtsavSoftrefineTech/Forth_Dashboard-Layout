@@ -2,7 +2,7 @@
   background-color: #f2ebe1;
 
   &__heading {
-    padding: 1.5rem 0 1.5rem 2rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
     border-bottom: 1px solid rgba(128, 128, 128, 0.258);
 
     & p:first-child {
@@ -33,6 +33,10 @@
       & p {
         font-weight: 700;
         letter-spacing: -0.01rem;
+        &:hover {
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.71);
+        }
       }
 
       & ion-icon {
@@ -53,6 +57,10 @@
         & p {
           font-weight: 700;
           letter-spacing: -0.01rem;
+          &:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.71);
+          }
         }
         & ion-icon {
           padding-bottom: 0.3rem;
@@ -69,6 +77,10 @@
           font-size: 1.2rem;
           font-weight: 520;
           margin-bottom: 0.8rem;
+          &:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.71);
+          }
         }
         & p:last-child {
           color: black;
@@ -84,6 +96,10 @@
         & p {
           font-weight: 700;
           letter-spacing: -0.01rem;
+          &:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.71);
+          }
         }
         & ion-icon {
           padding-bottom: 0.3rem;
@@ -100,12 +116,17 @@
           font-size: 1.2rem;
           font-weight: 520;
           margin-bottom: 0.8rem;
+          &:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.71);
+          }
         }
         & p:last-child {
           color: black;
         }
       }
     }
+
     &_reminder {
       display: flex;
       align-items: center;
@@ -115,6 +136,10 @@
       & p {
         font-weight: 700;
         letter-spacing: -0.01rem;
+        &:hover {
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.71);
+        }
       }
       & ion-icon {
         padding-bottom: 0.3rem;
@@ -123,6 +148,7 @@
         }
       }
     }
+
     &_messenger {
       display: flex;
       align-items: center;
@@ -130,6 +156,10 @@
       & p {
         font-weight: 700;
         letter-spacing: -0.01rem;
+        &:hover {
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.71);
+        }
       }
       & ion-icon {
         padding-bottom: 0.3rem;
@@ -138,5 +168,8 @@
         }
       }
     }
+  }
+  @media only screen and (max-width: 700px) {
+    display: none;
   }
 }
