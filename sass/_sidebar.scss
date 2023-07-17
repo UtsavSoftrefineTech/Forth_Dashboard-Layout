@@ -15,9 +15,8 @@
       }
     }
     & p:nth-child(2) {
-      color: rgba(0, 0, 0, 0.664);
       font-size: 1.2rem;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
   &__menu {
@@ -35,7 +34,6 @@
         letter-spacing: -0.01rem;
         &:hover {
           cursor: pointer;
-          color: rgba(0, 0, 0, 0.71);
         }
       }
 
@@ -59,7 +57,6 @@
           letter-spacing: -0.01rem;
           &:hover {
             cursor: pointer;
-            color: rgba(0, 0, 0, 0.71);
           }
         }
         & ion-icon {
@@ -73,17 +70,16 @@
       &-details {
         margin: 1.5rem 0 0 2rem;
         & p {
-          color: rgba(0, 0, 0, 0.664);
           font-size: 1.2rem;
-          font-weight: 550;
+          font-weight: 400;
           margin-bottom: 0.8rem;
           &:hover {
             cursor: pointer;
-            color: rgba(0, 0, 0, 0.71);
+            font-weight: 600;
           }
         }
         & p:last-child {
-          color: black;
+          font-weight: 600;
         }
       }
     }
@@ -98,7 +94,6 @@
           letter-spacing: -0.01rem;
           &:hover {
             cursor: pointer;
-            color: rgba(0, 0, 0, 0.71);
           }
         }
         & ion-icon {
@@ -112,18 +107,17 @@
       &-details {
         margin: 1.5rem 0 0 2rem;
         & p {
-          color: rgba(0, 0, 0, 0.664);
           font-size: 1.2rem;
-          font-weight: 550;
+          font-weight: 400;
 
           margin-bottom: 0.8rem;
           &:hover {
             cursor: pointer;
-            color: rgba(0, 0, 0, 0.71);
+            font-weight: 600;
           }
         }
         & p:last-child {
-          color: black;
+          font-weight: 600;
         }
       }
     }
@@ -139,7 +133,6 @@
         letter-spacing: -0.01rem;
         &:hover {
           cursor: pointer;
-          color: rgba(0, 0, 0, 0.71);
         }
       }
       & ion-icon {
@@ -159,7 +152,6 @@
         letter-spacing: -0.01rem;
         &:hover {
           cursor: pointer;
-          color: rgba(0, 0, 0, 0.71);
         }
       }
       & ion-icon {
@@ -198,7 +190,6 @@
         }
       }
       & p:nth-child(2) {
-        color: rgba(0, 0, 0, 0.664);
         font-size: 1.2rem;
         font-weight: 600;
       }
@@ -219,7 +210,6 @@
           letter-spacing: -0.01rem;
           &:hover {
             cursor: pointer;
-            color: rgba(0, 0, 0, 0.71);
           }
         }
 
@@ -243,7 +233,6 @@
             letter-spacing: -0.01rem;
             &:hover {
               cursor: pointer;
-              color: rgba(0, 0, 0, 0.71);
             }
           }
           & ion-icon {
@@ -257,17 +246,12 @@
         &-details {
           margin: 1.5rem 0 0 2rem;
           & p {
-            color: rgba(0, 0, 0, 0.664);
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.8rem;
             &:hover {
               cursor: pointer;
-              color: rgba(0, 0, 0, 0.71);
             }
-          }
-          & p:last-child {
-            color: black;
           }
         }
       }
@@ -282,7 +266,6 @@
             letter-spacing: -0.01rem;
             &:hover {
               cursor: pointer;
-              color: rgba(0, 0, 0, 0.71);
             }
           }
           & ion-icon {
@@ -296,13 +279,11 @@
         &-details {
           margin: 1.5rem 0 0 2rem;
           & p {
-            color: rgba(0, 0, 0, 0.664);
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.8rem;
             &:hover {
               cursor: pointer;
-              color: rgba(0, 0, 0, 0.71);
             }
           }
           & p:last-child {
@@ -322,7 +303,6 @@
           letter-spacing: -0.01rem;
           &:hover {
             cursor: pointer;
-            color: rgba(0, 0, 0, 0.71);
           }
         }
         & ion-icon {
@@ -342,7 +322,6 @@
           letter-spacing: -0.01rem;
           &:hover {
             cursor: pointer;
-            color: rgba(0, 0, 0, 0.71);
           }
         }
         & ion-icon {
