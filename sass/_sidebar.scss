@@ -180,10 +180,8 @@
     position: absolute;
     height: 100vh;
     width: 200px;
-    // height: calc(100vh - 18rem);
-    // top: 18rem;
     z-index: 1000;
-    display: none;
+    visibility: hidden;
     background-color: #f2ebe1;
 
     &__heading {

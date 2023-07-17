@@ -185,14 +185,6 @@
     justify-content: space-evenly;
     margin-top: 2rem;
 
-    // &-checkbox {
-    //   &:checked {
-    //     .mobile__sidebar {
-    //       visibility: visible;
-    //     }
-    //   }
-    // }
-
     &-logo {
       height: 5rem;
       width: 5rem;
@@ -202,10 +194,6 @@
       border-radius: 10px;
       line-height: 0;
       margin-bottom: 2rem;
-
-      &:first-child {
-        background-color: #f2ebe1;
-      }
       &:hover {
         cursor: pointer;
         background-color: #f2ebe1;
