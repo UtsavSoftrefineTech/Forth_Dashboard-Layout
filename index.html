@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <script
@@ -16,6 +16,28 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      window.onload = () => {
+        const elem = document.querySelector(".mobile__menu");
+        elem.addEventListener("mouseover", (e) => {
+          document
+            .querySelector(".mobile__sidebar")
+            .classList.add("display-block");
+        });
+
+        elem.addEventListener("mouseout", (e) => {
+          document
+            .querySelector(".mobile__sidebar")
+            .classList.remove("display-block");
+        });
+      };
+    </script>
+    <style>
+      .display-block {
+        display: block;
+        transition: 0.5s ease-in-out;
+      }
+    </style>
     <title>Test6</title>
   </head>
   <body>
@@ -51,6 +73,7 @@
           </div>
         </div>
       </div>
+
       <div class="mobile">
         <div class="mobile__header">
           <div class="mobile__header__brand">
@@ -82,24 +105,24 @@
           </div>
         </div>
         <div class="mobile__menu">
-          <div class="mobile__menu-logo">
+          <button class="mobile__menu-logo">
             <ion-icon name="home-outline"></ion-icon>
-          </div>
-          <div class="mobile__menu-logo">
+          </button>
+          <button class="mobile__menu-logo">
             <ion-icon name="people-outline"></ion-icon>
-          </div>
-          <div class="mobile__menu-logo">
+          </button>
+          <button class="mobile__menu-logo">
             <ion-icon name="today-outline"></ion-icon>
-          </div>
-          <div class="mobile__menu-logo">
+          </button>
+          <button class="mobile__menu-logo">
             <ion-icon name="create-outline"></ion-icon>
-          </div>
-          <div class="mobile__menu-logo">
+          </button>
+          <button class="mobile__menu-logo">
             <ion-icon name="time-outline"></ion-icon>
-          </div>
-          <div class="mobile__menu-logo">
+          </button>
+          <button class="mobile__menu-logo">
             <ion-icon name="chatbubble-outline"></ion-icon>
-          </div>
+          </button>
         </div>
       </div>
 
@@ -147,6 +170,54 @@
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </div>
           <div class="sidebar__menu_messenger">
+            <p>Messenger</p>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile__sidebar">
+        <div class="mobile__sidebar__heading">
+          <p>Ziferblat</p>
+          <p>Teamwork &amp; time management</p>
+        </div>
+        <div class="mobile__sidebar__menu">
+          <div class="mobile__sidebar__menu_team">
+            <p>Team</p>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+          <div class="mobile__sidebar__menu_project">
+            <div class="mobile__sidebar__menu_project-heading">
+              <p>Projects</p>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="mobile__sidebar__menu_project-details">
+              <p>All projects (4)</p>
+              <p>Design system</p>
+              <p>Make unique design <br />for customer</p>
+              <p>User Flow</p>
+              <p>UX research</p>
+              <p>Add new project</p>
+            </div>
+          </div>
+          <div class="mobile__sidebar__menu_task">
+            <div class="mobile__sidebar__menu_task-heading">
+              <p>Tasks</p>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="mobile__sidebar__menu_task-details">
+              <p>All tasks (3)</p>
+              <p>New (1)</p>
+              <p>In progress (1)</p>
+              <p>Done (1)</p>
+              <p>Add new task</p>
+            </div>
+          </div>
+          <div class="mobile__sidebar__menu_reminder">
+            <p>Reminders</p>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+          <div class="mobile__sidebar__menu_messenger">
             <p>Messenger</p>
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </div>
@@ -286,7 +357,7 @@
         <div class="profile__header">
           <div class="profile__header__button">Add project</div>
           <div class="profile__header__logo">
-            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
           </div>
         </div>
 

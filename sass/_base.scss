@@ -1,5 +1,5 @@
 // FONT VARIABLES
-$font-primary: "Lato", sans-serif;
+$font-primary: "roboto", sans-serif;
 
 /*=============== BASE ===============*/
 *,
@@ -38,6 +38,7 @@ body {
 .container {
   height: 100vh;
   display: grid;
+  position: relative;
   grid-template-columns:
     5vw minmax(max-content, 1fr) repeat(3, 1fr)
     repeat(2, 1fr);

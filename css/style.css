@@ -24,13 +24,14 @@ html {
 
 body {
   background-color: #fdfdfd;
-  font-family: "Lato", sans-serif;
+  font-family: "roboto", sans-serif;
   font-weight: 300;
   line-height: 1; }
 
 .container {
   height: 100vh;
   display: grid;
+  position: relative;
   grid-template-columns: 5vw minmax(max-content, 1fr) repeat(3, 1fr) repeat(2, 1fr); }
   @media only screen and (max-width: 850px) {
     .container {
@@ -118,7 +119,7 @@ body {
       .mobile__header__heading p:nth-child(2) {
         color: rgba(0, 0, 0, 0.664);
         font-size: 1.2rem;
-        font-weight: 520; }
+        font-weight: 600; }
     .mobile__header__info {
       display: flex;
       align-items: center;
@@ -179,10 +180,14 @@ body {
     justify-content: space-evenly;
     margin-top: 2rem; }
     .mobile__menu-logo {
+      height: 5rem;
+      width: 5rem;
+      border: none;
       font-size: 2.5rem;
-      padding: 1.5rem;
+      background-color: white;
       border-radius: 10px;
-      line-height: 0; }
+      line-height: 0;
+      margin-bottom: 2rem; }
       .mobile__menu-logo:first-child {
         background-color: #f2ebe1; }
       .mobile__menu-logo:hover {
@@ -424,7 +429,7 @@ body {
     .profile__realdata_time p:first-child {
       color: rgba(0, 0, 0, 0.404);
       font-size: 1.1rem;
-      font-weight: 520;
+      font-weight: 600;
       margin-bottom: 0.5rem; }
     .profile__realdata_time p:nth-child(2) {
       font-size: 1.5rem;
@@ -433,7 +438,7 @@ body {
       color: rgba(0, 0, 0, 0.404);
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
-      font-weight: 520; }
+      font-weight: 600; }
     .profile__realdata_progress p:nth-child(2) {
       font-size: 1.5rem;
       font-weight: 700; }
@@ -441,26 +446,29 @@ body {
       color: rgba(0, 0, 0, 0.404);
       margin-bottom: 0.5rem;
       font-size: 1.1rem;
-      font-weight: 520; }
+      font-weight: 600; }
     .profile__realdata_tasks p:nth-child(2) {
       font-size: 1.5rem;
       font-weight: 700; }
+    @media only screen and (max-width: 1100px) {
+      .profile__realdata {
+        padding: 0 1rem; } }
     @media only screen and (max-width: 1000px) {
       .profile__realdata {
-        padding: 0 1.5rem; } }
+        padding: 0 1rem; } }
     @media only screen and (max-width: 950px) {
       .profile__realdata {
         height: 7.5rem;
-        padding: 0 0.8rem; } }
+        padding: 0 0.2rem; } }
     @media only screen and (max-width: 850px) {
       .profile__realdata {
-        padding: 0 2rem; } }
+        padding: 0 1.5rem; } }
     @media only screen and (max-width: 770px) {
       .profile__realdata {
-        padding: 0 1.5rem; } }
+        padding: 0 0.5rem; } }
     @media only screen and (max-width: 740px) {
       .profile__realdata {
-        padding: 0 1rem; }
+        padding: 0 0.5rem; }
         .profile__realdata_time p:first-child {
           font-size: 1rem; }
         .profile__realdata_time p:nth-child(2) {
@@ -481,7 +489,7 @@ body {
         padding: 0 2rem; } }
     @media only screen and (max-width: 550px) {
       .profile__realdata {
-        padding: 0 1.5rem; } }
+        padding: 0 1rem; } }
     @media only screen and (max-width: 500px) {
       .profile__realdata {
         padding: 0 4rem; } }
@@ -527,7 +535,7 @@ body {
       background-color: #f6f1eb; }
       .profile__dailywork_tasks .task-card1 p {
         font-size: 1.5rem;
-        font-weight: 510;
+        font-weight: 500;
         padding: 3.5rem 2rem 0 2.5rem; }
       .profile__dailywork_tasks .task-card1 .add-icon {
         position: absolute;
@@ -568,7 +576,7 @@ body {
           background-color: black; }
     .profile__dailywork_tasks .task-card2_info {
       font-size: 1.5rem;
-      font-weight: 510;
+      font-weight: 500;
       padding: 1rem 2rem 0 2rem; }
     @media only screen and (max-width: 770px) {
       .profile__dailywork_tasks .task-card2_info {
@@ -598,7 +606,7 @@ body {
           background-color: black; }
     .profile__dailywork_tasks .task-card3_info {
       font-size: 1.5rem;
-      font-weight: 510;
+      font-weight: 500;
       padding: 1rem 2rem 0 2rem; }
     @media only screen and (max-width: 770px) {
       .profile__dailywork_tasks .task-card3_info {
@@ -632,7 +640,7 @@ body {
       .profile__dailywork_tasks .task-card4_info {
         color: white;
         font-size: 1.5rem;
-        font-weight: 510;
+        font-weight: 500;
         padding: 1rem 2rem 0 2rem; }
       @media only screen and (max-width: 770px) {
         .profile__dailywork_tasks .task-card4_info {
@@ -698,7 +706,7 @@ body {
         font-weight: 700;
         letter-spacing: -0.01rem; }
       .project__recent_heading p:nth-child(2) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 500;
         color: #f08c55; }
         .project__recent_heading p:nth-child(2):hover {
@@ -775,7 +783,7 @@ body {
         font-size: 2rem;
         font-weight: 700; }
       .project__recent_card_data_deadline {
-        font-weight: 400;
+        font-weight: 500;
         line-height: 4; }
       .project__recent_card_progress p {
         font-weight: 500;
@@ -844,7 +852,7 @@ body {
     .project__reminder_card_time p {
       color: rgba(0, 0, 0, 0.664);
       font-size: 1.2rem;
-      font-weight: 520;
+      font-weight: 550;
       line-height: 1.2; }
     .project__reminder_card_title p {
       width: 20vw;
@@ -984,7 +992,7 @@ body {
     .sidebar__heading p:nth-child(2) {
       color: rgba(0, 0, 0, 0.664);
       font-size: 1.2rem;
-      font-weight: 520; }
+      font-weight: 600; }
   .sidebar__menu {
     font-size: 1.5rem;
     padding: 3rem 2rem 0rem 2rem; }
@@ -1024,7 +1032,7 @@ body {
         .sidebar__menu_project-details p {
           color: rgba(0, 0, 0, 0.664);
           font-size: 1.2rem;
-          font-weight: 520;
+          font-weight: 550;
           margin-bottom: 0.8rem; }
           .sidebar__menu_project-details p:hover {
             cursor: pointer;
@@ -1052,7 +1060,7 @@ body {
         .sidebar__menu_task-details p {
           color: rgba(0, 0, 0, 0.664);
           font-size: 1.2rem;
-          font-weight: 520;
+          font-weight: 550;
           margin-bottom: 0.8rem; }
           .sidebar__menu_task-details p:hover {
             cursor: pointer;
@@ -1091,3 +1099,127 @@ body {
   @media only screen and (max-width: 700px) {
     .sidebar {
       display: none; } }
+
+.mobile__sidebar {
+  position: absolute;
+  height: 100vh;
+  width: 200px;
+  z-index: 1000;
+  display: none;
+  background-color: #f2ebe1; }
+  .mobile__sidebar__heading {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.258); }
+    .mobile__sidebar__heading p:first-child {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.4; }
+      .mobile__sidebar__heading p:first-child:hover {
+        cursor: pointer; }
+    .mobile__sidebar__heading p:nth-child(2) {
+      color: rgba(0, 0, 0, 0.664);
+      font-size: 1.2rem;
+      font-weight: 600; }
+  .mobile__sidebar__menu {
+    font-size: 1.5rem;
+    padding: 3rem 3rem 0rem 3rem; }
+    .mobile__sidebar__menu_team {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem; }
+      .mobile__sidebar__menu_team p {
+        font-weight: 700;
+        letter-spacing: -0.01rem; }
+        .mobile__sidebar__menu_team p:hover {
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.71); }
+      .mobile__sidebar__menu_team ion-icon {
+        padding-bottom: 0.3rem; }
+        .mobile__sidebar__menu_team ion-icon:hover {
+          cursor: pointer; }
+    .mobile__sidebar__menu_project {
+      margin-bottom: 2rem; }
+      .mobile__sidebar__menu_project-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .mobile__sidebar__menu_project-heading p {
+          font-weight: 700;
+          letter-spacing: -0.01rem; }
+          .mobile__sidebar__menu_project-heading p:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.71); }
+        .mobile__sidebar__menu_project-heading ion-icon {
+          padding-bottom: 0.3rem; }
+          .mobile__sidebar__menu_project-heading ion-icon:hover {
+            cursor: pointer; }
+      .mobile__sidebar__menu_project-details {
+        margin: 1.5rem 0 0 2rem; }
+        .mobile__sidebar__menu_project-details p {
+          color: rgba(0, 0, 0, 0.664);
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 0.8rem; }
+          .mobile__sidebar__menu_project-details p:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.71); }
+        .mobile__sidebar__menu_project-details p:last-child {
+          color: black; }
+    .mobile__sidebar__menu_task {
+      margin-bottom: 2rem; }
+      .mobile__sidebar__menu_task-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .mobile__sidebar__menu_task-heading p {
+          font-weight: 700;
+          letter-spacing: -0.01rem; }
+          .mobile__sidebar__menu_task-heading p:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.71); }
+        .mobile__sidebar__menu_task-heading ion-icon {
+          padding-bottom: 0.3rem; }
+          .mobile__sidebar__menu_task-heading ion-icon:hover {
+            cursor: pointer; }
+      .mobile__sidebar__menu_task-details {
+        margin: 1.5rem 0 0 2rem; }
+        .mobile__sidebar__menu_task-details p {
+          color: rgba(0, 0, 0, 0.664);
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 0.8rem; }
+          .mobile__sidebar__menu_task-details p:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.71); }
+        .mobile__sidebar__menu_task-details p:last-child {
+          color: black; }
+    .mobile__sidebar__menu_reminder {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem; }
+      .mobile__sidebar__menu_reminder p {
+        font-weight: 700;
+        letter-spacing: -0.01rem; }
+        .mobile__sidebar__menu_reminder p:hover {
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.71); }
+      .mobile__sidebar__menu_reminder ion-icon {
+        padding-bottom: 0.3rem; }
+        .mobile__sidebar__menu_reminder ion-icon:hover {
+          cursor: pointer; }
+    .mobile__sidebar__menu_messenger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .mobile__sidebar__menu_messenger p {
+        font-weight: 700;
+        letter-spacing: -0.01rem; }
+        .mobile__sidebar__menu_messenger p:hover {
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.71); }
+      .mobile__sidebar__menu_messenger ion-icon {
+        padding-bottom: 0.3rem; }
+        .mobile__sidebar__menu_messenger ion-icon:hover {
+          cursor: pointer; }
